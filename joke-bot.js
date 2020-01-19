@@ -44,7 +44,6 @@ const formatMessage = (orgId, message, type, needButtons = false) => {
             },{
               "label": "Funny!",
               "value": "${STOP_JOKE}",
-              "type": "action",
               "reaction": {"type": "delete"}
             }
         ]` : "" ) + `
@@ -85,4 +84,4 @@ app.post('/api', (req, res) => {
         handleMessage(req.body.orgId, req.body.data)
     }
     return res.send('ok')
- });
+});
